@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         TextView textView4 = (TextView) findViewById(R.id.text_view4);
         textView4.setText(fullString);
 
-        Pattern urlDetect = Pattern.compile("([a-zA-Z0-9]+):\\/\\/([a-zA-Z0-9.]+)"); // this is a terrible regex, don't use it
+        Pattern urlDetect = Pattern.compile("([a-zA-Z0-9]+):\\/\\/([a-zA-Z0-9.]+)"); // this is a terrible regex, don't use it.
         Matcher matcher = urlDetect.matcher(fullString);
         String scheme = null;
 
