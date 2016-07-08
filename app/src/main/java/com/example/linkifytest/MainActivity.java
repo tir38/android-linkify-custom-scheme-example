@@ -49,13 +49,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         /**
-         * This works but you have do do some fancy footwork to use Linkify
+         * This works but you have to do some fancy footwork to use Linkify
          */
         String fullString = "This sentence contains a custom://www.google.com custom scheme url";
         TextView textView4 = (TextView) findViewById(R.id.text_view4);
         textView4.setText(fullString);
 
-        Pattern urlDetect = Pattern.compile("([a-zA-Z0-9]+):\\/\\/([a-zA-Z0-9.]+)"); // this is a terrible regex, don't use it.
+        Pattern urlDetect = Pattern.compile("([a-zA-Z0-9]+):\\/\\/([a-zA-Z0-9.]+)"); // this is a terrible regex, don't use it. There are better url regexs.
         Matcher matcher = urlDetect.matcher(fullString);
         String scheme = null;
 
